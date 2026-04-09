@@ -1,0 +1,16 @@
+CREATE TABLE `improvado`.`google.ads` (
+  `date` DATE,
+  `campaign_id` VARCHAR(50),
+  `campaign_name` VARCHAR (255),
+  `ad_group_id` VARCHAR (50),
+  `ad_group_name` VARCHAR(255),
+  `impressions` INT DEFAULT 0,
+  `clicks` INT DEFAULT 0,
+  `cost` DECIMAL(15, 2),
+  `conversions` INT DEFAULT 0,
+  `conversions views` INT DEFAULT 0,
+  `ctr` DECIMAL (15, 2),
+  `avg_cpc` DECIMAL (15, 2),
+  `quality_score` INT DEFAULT 0,
+  `search_impression_share` DECIMAL (5, 2)
+);
