@@ -1,0 +1,22 @@
+CREATE TABLE campaign_performance (
+    -- Date and Identifiers
+    report_date DATE NOT NULL,
+    campaign_id VARCHAR(50) NOT NULL,
+    campaign_name VARCHAR(255),
+    ad_set_id VARCHAR(50) NOT NULL,
+    ad_set_name VARCHAR(255),
+
+    -- Delivery & Engagement Metrics
+    impressions INT DEFAULT 0,
+    clicks INT DEFAULT 0,
+    reach INT DEFAULT 0,
+    frequency DECIMAL(5, 2),
+    video_views INT DEFAULT 0,
+    
+    -- Financial & Conversion Metrics
+    spend DECIMAL(15, 2),
+    conversions INT DEFAULT 0,
+    engagement_rate DECIMAL(7, 4), -- Stored as decimal (e.g., 0.0195)
+
+    -- Primary Key to ensure unique rows per ad set per day
+    PRIMARY KEY (report_date, ad_set_id)
