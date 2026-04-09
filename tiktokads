@@ -1,0 +1,19 @@
+CREATE TABLE `improvado`.`tiktok.ads` (
+  `date` DATE,
+  `campaign_id` VARCHAR(50),
+  `campaign_name` VARCHAR (255),
+  `adgroup_id` VARCHAR (50),
+  `adgroup_name` VARCHAR(255),
+  `impressions` INT DEFAULT 0,
+  `clicks` INT DEFAULT 0,
+  `cost` DECIMAL(15, 2),
+  `conversions` INT DEFAULT 0,
+  `video views` INT DEFAULT 0,
+  `video_watch_25` INT DEFAULT 0,
+  `video_watch_50` INT DEFAULT 0,
+  `video_watch_75` INT DEFAULT 0,
+  `video_watch_100` INT DEFAULT 0,
+  `likes` INT DEFAULT 0,
+  `shares` INT DEFAULT 0,
+  `comments` INT DEFAULT 0
+);
