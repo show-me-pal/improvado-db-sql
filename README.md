@@ -1,3 +1,3 @@
 # improvado-db-sql
 
-// Repository for improvado assessment, used to exhibit my SQL abilities for marketing firms. 
+// Repository for SQL assessments, and samples for recruiter review. Samples contain public data recieved from facebook, tiktok, and google. This is for my sandbox use only. 
