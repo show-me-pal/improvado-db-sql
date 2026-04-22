@@ -1,0 +1,29 @@
+SELECT
+  `f`.`date`,
+  `t`.`date`,
+  `g`.`date`,
+  `f`.`ad_set_id` as "facebook id",
+  `t`.`adgroup_id` as "tiktok id",
+  `g`.`ad_group_id` as "google id",
+  `f`.`impressions` as "facebook impressions",
+  `t`.`impressions` as "tiktok impressions",
+  `g`.`impressions` as "google impressions",
+  `f`.`clicks` as "facebook clicks",
+  `t`.`clicks` as "tiktok clicks",
+  `g`.`clicks` as "google clicks",
+  `f`.`conversion` as "facebook conversions",
+  `t`.`conversions` as "tiktok conversions",
+  `g`.`conversions` as "google conversions",
+  `f`.`spend` as "facebook cost",
+  `t`.`cost` as "tiktok cost",
+  `g`.`cost` as "google cost"
+FROM `improvado`.`facebook.ads` AS `f`
+LEFT JOIN `improvado`.`google.ads` AS `g` 
+  ON `f`.`date` = `g`.`date` 
+LEFT JOIN `improvado`.`tiktok.ads` AS `t` 
+  ON `f`.`date` = `t`.`date` 
+WHERE 
+`f`.`date` IS NOT NULL OR
+`t`.`date` IS NOT NULL OR
+`g`.`date` IS NOT NULL
+ORDER BY `f`.`date`;
